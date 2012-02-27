@@ -184,6 +184,9 @@ DJANGO_APPS = (
     # AJAX helpers:
     'dajaxice',
 
+    # Sentry requirements:
+    'raven.contrib.django',
+
     # South database migrations:
     'south',
 )
