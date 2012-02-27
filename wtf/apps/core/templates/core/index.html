@@ -26,7 +26,11 @@
         // Query our backend to lookup caller ID name information.
         function cnam_callback(data) {
             resultdiv = document.getElementById('cnam');
-            resultdiv.innerHTML = "<p>Looks like the dude who's been bugging you is: " + data.cnam + "</p>";
+            if (data.cnam) {
+                resultdiv.innerHTML = "<p>Looks like the dude who's been bugging you is: " + data.cnam + "</p>";
+            } else {
+                resultdiv.innerHTML = "<p style=\"color:red\">Sorry bro, we can't find the guy who called you. Try again later!</p>";
+            }
         }
     </script>
 
