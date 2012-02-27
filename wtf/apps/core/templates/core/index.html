@@ -21,7 +21,7 @@
 
     <script type="text/javascript">
         function cnam_callback(data) {
-            alert("woot");
+            alert(data.cnam);
         }
     </script>
 
@@ -57,7 +57,7 @@
 
     <form class="well form-search">
         <input type="text" class="input-medium search-query" id="phone_number">
-        <button type="submit" class="btn" onclick="Dajaxice.apps.core.lookup_cnam(cnam_callback, {'phone_number': document.getElementById('phone_number').value});">Find 'Em</button>
+        <button type="submit" class="btn" onclick="Dajaxice.apps.core.lookup_cnam(cnam_callback, {'phone_number': document.getElementById('phone_number').value})">Find 'Em</button>
     </form>
 
 </div> <!-- /container -->
