@@ -25,7 +25,8 @@
 
         // Query our backend to lookup caller ID name information.
         function cnam_callback(data) {
-            alert(data.cnam);
+            resultdiv = document.getElementById('cnam');
+            resultdiv.innerHTML = data.cnam;
         }
     </script>
 
@@ -66,6 +67,7 @@
         -->
         <input type="button" class="btn" name="Get 'Em" onclick="Dajaxice.apps.core.lookup_cnam(cnam_callback, {'phone_number': document.getElementById('phone_number').value})">
     </form>
+    <div id="cnam"></div>
 
 </div> <!-- /container -->
 
