@@ -9,9 +9,9 @@
         <meta name="title" content="WHO THE FUCK CALLED ME? | {% block title %}{% endblock %}"/>
         <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
         <link href="{{ STATIC_URL }}css/bootstrap-responsive.css" rel="stylesheet">
+        {% dajaxice_js_import "{{ STATIC_URL }}js/dajaxice.core.js" %}
         {% block css %}{% endblock %}
         {% block js %}{% endblock %}
-        {% dajaxice_js_import %}
     </head>
     <body>
         <!-- custom html -->
