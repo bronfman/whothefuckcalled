@@ -13,3 +13,4 @@ django-debug-toolbar==0.8.5
 Sphinx==1.1.2
 django-cache-machine==0.6
 raven==1.4.5
+opencnam==0.1
