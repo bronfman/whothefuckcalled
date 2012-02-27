@@ -10,6 +10,8 @@ from S3 import CallingFormat
 from common import *
 
 
+DEBUG = True
+TEMPLATE_DEBUG = True
 ########## EMAIL CONFIGURATION
 # See: https://docs.djangoproject.com/en/1.3/ref/settings/#email-backend
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
