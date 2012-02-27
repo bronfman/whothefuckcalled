@@ -1,9 +1,13 @@
+from dajaxice.core import dajaxice_autodiscover
 from django.conf.urls.defaults import patterns, include, url
 from django.contrib import admin
 
 
-# Uncomment the next two lines to enable the admin:
+# Enable the admin.
 admin.autodiscover()
+
+# Use dajaxice for ajax stuff.
+dajaxice_autodiscover()
 
 
 urlpatterns = patterns('',
