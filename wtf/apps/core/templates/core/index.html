@@ -27,7 +27,6 @@
         function cnam_callback(data) {
             resultdiv = document.getElementById('cnam');
             resultdiv.innerHTML = "<p>Looks like the dude who's been bugging you is: " + data.cnam + "</p>";
-            return false;
         }
     </script>
 
@@ -60,7 +59,7 @@
     <p>We do too! Just enter the person's phone number below, and hit the
     button. We'll dig up the dirt.</p>
 
-    <form class="well form-search" onsubmit="return Dajaxice.apps.core.lookup_cnam(cnam_callback, {'phone_number': document.getElementById('phone_number').value})">
+    <form class="well form-search" onsubmit="Dajaxice.apps.core.lookup_cnam(cnam_callback, {'phone_number': document.getElementById('phone_number').value}); return false;">
         <input type="text" class="input-medium search-query" id="phone_number">
         <input type="submit" class="btn" value="Get 'Em">
     </form>
