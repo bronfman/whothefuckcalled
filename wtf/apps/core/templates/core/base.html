@@ -3,10 +3,31 @@
     <head>
         <meta charset="utf-8"/>
         <meta name="description" content="{% block description %}{% endblock %}"/>
-        <meta name="keywords" content="{ block keywords %}{% endblock %}"/>
+        <meta name="keywords" content="{% block keywords %}{% endblock %}"/>
         <meta name="title" content="WHO THE FUCK CALLED ME? | {% block title %}{% endblock %}"/>
+        <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
+        <link href="{{ STATIC_URL }}css/bootstrap-responsive.css" rel="stylesheet">
+        {% block css %}{% endblock %}
+        {% block js %}{% endblock %}
     </head>
     <body>
+        <!-- custom html -->
         {% block body %}{% endblock %}
+
+        <!-- JS -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="{{ STATIC_URL }}js/jquery.js"></script>
+        <script src="{{ STATIC_URL }}js/bootstrap-transition.js"></script>
+        <script src="{{ STATIC_URL }}js/bootstrap-alert.js"></script>
+        <script src="{{ STATIC_URL }}js/bootstrap-modal.js"></script>
+        <script src="{{ STATIC_URL }}js/bootstrap-dropdown.js"></script>
+        <script src="{{ STATIC_URL }}js/bootstrap-scrollspy.js"></script>
+        <script src="{{ STATIC_URL }}js/bootstrap-tab.js"></script>
+        <script src="{{ STATIC_URL }}js/bootstrap-tooltip.js"></script>
+        <script src="{{ STATIC_URL }}js/bootstrap-popover.js"></script>
+        <script src="{{ STATIC_URL }}js/bootstrap-button.js"></script>
+        <script src="{{ STATIC_URL }}js/bootstrap-collapse.js"></script>
+        <script src="{{ STATIC_URL }}js/bootstrap-carousel.js"></script>
+        <script src="{{ STATIC_URL }}js/bootstrap-typeahead.js"></script>
     </body>
 </html>
