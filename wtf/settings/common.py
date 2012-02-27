@@ -189,6 +189,7 @@ DJANGO_APPS = (
 )
 
 LOCAL_APPS = (
+    'apps.core',
 )
 
 # See: https://docs.djangoproject.com/en/1.3/ref/settings/#installed-apps
