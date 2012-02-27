@@ -9,4 +9,5 @@ def lookup_cnam(request, phone_number):
     print 'phone_number', phone_number
     phone = Phone(phone_number)
     print 'phone_number.cnam', phone.cnam or ''
+    print dumps({'cnam': phone.cnam or ''})
     return dumps({'cnam': phone.cnam or ''})
