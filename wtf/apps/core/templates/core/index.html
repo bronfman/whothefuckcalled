@@ -60,12 +60,9 @@
     <h1>Bootstrap starter template</h1>
     <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
 
-    <form class="well form-search">
+    <form onsubmit="Dajaxice.apps.core.lookup_cnam(cnam_callback, {'phone_number': document.getElementById('phone_number').value})">
         <input type="text" class="input-medium search-query" id="phone_number">
-        <button type="submit" class="btn" onclick="Dajaxice.apps.core.lookup_cnam(cnam_callback, {'phone_number': document.getElementById('phone_number').value})">Find 'Em</button>
-        <!--
-        <input type="button" class="btn" name="Get 'Em" onclick="Dajaxice.apps.core.lookup_cnam(cnam_callback, {'phone_number': document.getElementById('phone_number').value})">
-        -->
+        <input type="button" class="btn" name="Get 'Em">
     </form>
     <div id="cnam"></div>
 
