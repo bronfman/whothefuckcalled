@@ -17,6 +17,17 @@
 {% endblock %}
 
 
+{% block js %}
+
+    <script type="text/javascript">
+        function cnam_callback(data) {
+            alert("woot"+data.cnam);
+        };
+    </script>
+
+{% endblock %}
+
+
 {% block body %}
 
 <div class="navbar navbar-fixed-top">
@@ -43,6 +54,11 @@
 
     <h1>Bootstrap starter template</h1>
     <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
+
+    <form class="well form-search">
+        <input type="text" class="input-medium search-query" id="phone_number">
+        <button type="submit" class="btn" onclick="Dajaxice.apps.core.lookup_cnam(cnam_callback, {'phone_number': document.getElementById('phone_number').value});">Find 'Em</button>
+    </form>
 
 </div> <!-- /container -->
 
