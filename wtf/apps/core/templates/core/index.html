@@ -20,6 +20,10 @@
 {% block js %}
 
     <script type="text/javascript">
+        // Dajaxice error handler.
+        Dajaxice.setup({'default_exception_callback': function(){ alert('Error!'); }});
+
+        // Query our backend to lookup caller ID name information.
         function cnam_callback(data) {
             alert(data.cnam);
         }
